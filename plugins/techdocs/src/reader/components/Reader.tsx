@@ -433,12 +433,12 @@ export const useTechDocsReaderDom = (entityRef: EntityName): Element | null => {
                 display: none;
               }
               
-              .md-sidebar--secondary {
-                display: none;
-              }
-              .md-sidebar--primary {
+              [dir=ltr] .md-sidebar--primary {
                 width: 10rem;
-                left: ${isPinned ? '242px' : '72px'} !important;
+                left: ${isPinned ? '242px' : '72px'};
+              }
+              .md-sidebar--secondary:not([hidden]) {
+                display: none;
               }
 
               .md-content {
