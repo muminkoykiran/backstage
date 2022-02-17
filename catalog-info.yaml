@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: GelistirmePlatformlariYonetimi
+  name: backstage
   description: |
-    Garanti BBVA Technology Backstage is an open-source developer portal that puts the developer experience first.
+    Garanti BBVA Technology Backstage is an open-source developer portal that puts the developer experience first. Development Platforms Management Documentations.
   links:
     - title: Website
       url: http://backstage.io
