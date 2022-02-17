@@ -1,11 +1,11 @@
 # Garanti BBVA Teknoloji Documentation
 
-Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
-Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
-Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
-Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
-Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
-Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
+Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası, 
+Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası, 
+Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası, 
+Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası, 
+Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası, 
+Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası, 
 Geliştirme Platformları Yönetimi Ekibi Dokümantasyon Sayfası
 
 ## Stratejik Plan
