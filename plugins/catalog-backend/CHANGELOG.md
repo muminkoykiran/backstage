@@ -1,5 +1,15 @@
 # @backstage/plugin-catalog-backend
 
+## 0.22.0
+
+### Minor Changes
+
+- 9876e7f172: **BREAKING**: Removed unused `durationText` utility.
+
+### Patch Changes
+
+- b1296f1f57: Deprecated `StaticLocationProcessor` which is unused and replaced by `ConfigLocationEntityProvider`.
+
 ## 0.21.4
 
 ### Patch Changes

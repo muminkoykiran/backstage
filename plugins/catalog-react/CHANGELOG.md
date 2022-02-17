@@ -1,5 +1,13 @@
 # @backstage/plugin-catalog-react
 
+## 0.7.0
+
+### Minor Changes
+
+- e2e0b6625c: Improved API documentation.
+
+  **BREAKING**: The individual table column factories (e.g. `createEntityRefColumn`) are now no longer available directly, but only through `EntityTable.columns`.
+
 ## 0.6.15
 
 ### Patch Changes

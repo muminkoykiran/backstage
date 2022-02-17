@@ -1,5 +1,12 @@
 # @backstage/plugin-catalog
 
+## 0.8.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-catalog-react@0.7.0
+
 ## 0.8.0
 
 ### Minor Changes

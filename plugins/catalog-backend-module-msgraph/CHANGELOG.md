@@ -1,5 +1,12 @@
 # @backstage/plugin-catalog-backend-module-msgraph
 
+## 0.2.17
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-catalog-backend@0.22.0
+
 ## 0.2.16
 
 ### Patch Changes

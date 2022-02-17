@@ -1,5 +1,12 @@
 # @backstage/plugin-scaffolder
 
+## 0.12.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-catalog-react@0.7.0
+
 ## 0.12.3
 
 ### Patch Changes
