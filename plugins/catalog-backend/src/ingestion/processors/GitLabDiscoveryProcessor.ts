@@ -117,20 +117,17 @@ export class GitLabDiscoveryProcessor implements CatalogProcessor {
       const project_branch = branch === '*' ? project.default_branch : branch;
 
       emit(
-        results.location(
-          {
-            type: 'url',
-            // The format expected by the GitLabUrlReader:
-            // https://gitlab.com/groupA/teams/teamA/subgroupA/repoA/-/blob/branch/filepath
-            //
-            // This unfortunately will trigger another API call in `getGitLabFileFetchUrl` to get the project ID.
-            // The alternative is using the `buildRawUrl` function, which does not support subgroups, so providing a raw
-            // URL here won't work either.
-            target: `${project.web_url}/-/blob/${project_branch}/${catalogPath}`,
-            presence: 'optional',
-          },
-          true,
-        ),
+        results.location({
+          type: 'url',
+          // The format expected by the GitLabUrlReader:
+          // https://gitlab.com/groupA/teams/teamA/subgroupA/repoA/-/blob/branch/filepath
+          //
+          // This unfortunately will trigger another API call in `getGitLabFileFetchUrl` to get the project ID.
+          // The alternative is using the `buildRawUrl` function, which does not support subgroups, so providing a raw
+          // URL here won't work either.
+          target: `${project.web_url}/-/blob/${project_branch}/${catalogPath}`,
+          presence: 'optional',
+        }),
       );
     }
 
@@ -142,9 +139,10 @@ export class GitLabDiscoveryProcessor implements CatalogProcessor {
     return true;
   }
 
-  async updateLastActivity(): Promise<string | undefined> {
-    const lastActivity = await this.cache.get('last-activity');
-    await this.cache.set('last-activity', new Date().toISOString());
+  private async updateLastActivity(): Promise<string | undefined> {
+    const cacheKey = `processors/${this.getProcessorName()}/last-activity`;
+    const lastActivity = await this.cache.get(cacheKey);
+    await this.cache.set(cacheKey, new Date().toISOString());
     return lastActivity as string | undefined;
   }
 }

@@ -15,6 +15,7 @@ import { IndexableDocument } from '@backstage/search-common';
 import { InfoCardVariants } from '@backstage/core-components';
 import { Overrides } from '@material-ui/core/styles/overrides';
 import { default as React_2 } from 'react';
+import { ReactNode } from 'react';
 import { RouteRef } from '@backstage/core-plugin-api';
 import { StyleRules } from '@material-ui/core/styles/withStyles';
 import { TableColumn } from '@backstage/core-components';
@@ -27,8 +28,6 @@ export function AboutCard(props: AboutCardProps): JSX.Element;
 
 // @public
 export interface AboutCardProps {
-  // @deprecated (undocumented)
-  entity?: Entity;
   // (undocumented)
   variant?: InfoCardVariants;
 }
@@ -80,7 +79,7 @@ export interface CatalogKindHeaderProps {
 }
 
 // @public (undocumented)
-const catalogPlugin: BackstagePlugin<
+export const catalogPlugin: BackstagePlugin<
   {
     catalogIndex: RouteRef<undefined>;
     catalogEntity: RouteRef<{
@@ -101,16 +100,20 @@ const catalogPlugin: BackstagePlugin<
     >;
   }
 >;
-export { catalogPlugin };
-export { catalogPlugin as plugin };
+
+// @public @deprecated (undocumented)
+export const CatalogResultListItem: typeof CatalogSearchResultListItem;
+
+// @public @deprecated (undocumented)
+export type CatalogResultListItemProps = CatalogSearchResultListItemProps;
 
 // @public (undocumented)
-export function CatalogResultListItem(
-  props: CatalogResultListItemProps,
+export function CatalogSearchResultListItem(
+  props: CatalogSearchResultListItemProps,
 ): JSX.Element;
 
 // @public
-export interface CatalogResultListItemProps {
+export interface CatalogSearchResultListItemProps {
   // (undocumented)
   result: IndexableDocument;
 }
@@ -156,23 +159,6 @@ export interface CatalogTableRow {
     ownedByRelations: EntityName[];
   };
 }
-
-// @public (undocumented)
-export const columnFactories: Readonly<{
-  createNameColumn(
-    options?:
-      | {
-          defaultKind?: string | undefined;
-        }
-      | undefined,
-  ): TableColumn<CatalogTableRow>;
-  createSystemColumn(): TableColumn<CatalogTableRow>;
-  createOwnerColumn(): TableColumn<CatalogTableRow>;
-  createSpecTypeColumn(): TableColumn<CatalogTableRow>;
-  createSpecLifecycleColumn(): TableColumn<CatalogTableRow>;
-  createMetadataDescriptionColumn(): TableColumn<CatalogTableRow>;
-  createTagsColumn(): TableColumn<CatalogTableRow>;
-}>;
 
 // @public
 export interface DefaultCatalogPageProps {
@@ -287,8 +273,6 @@ export interface EntityLinksCardProps {
   //
   // (undocumented)
   cols?: ColumnBreakpoints | number;
-  // @deprecated (undocumented)
-  entity?: Entity;
   // (undocumented)
   variant?: 'gridItem';
 }
@@ -309,14 +293,14 @@ export function EntityProcessingErrorsPanel(): JSX.Element | null;
 
 // @public (undocumented)
 export const EntitySwitch: {
-  (props: { children: React_2.ReactNode }): JSX.Element | null;
+  (props: EntitySwitchProps): JSX.Element | null;
   Case: (_props: EntitySwitchCaseProps) => null;
 };
 
 // @public (undocumented)
 export interface EntitySwitchCaseProps {
   // (undocumented)
-  children: React_2.ReactNode;
+  children: ReactNode;
   // (undocumented)
   if?: (
     entity: Entity,
@@ -324,6 +308,12 @@ export interface EntitySwitchCaseProps {
       apis: ApiHolder;
     },
   ) => boolean | Promise<boolean>;
+}
+
+// @public
+export interface EntitySwitchProps {
+  // (undocumented)
+  children: ReactNode;
 }
 
 // @public (undocumented)

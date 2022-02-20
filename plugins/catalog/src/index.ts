@@ -22,9 +22,8 @@
 
 export * from './components/AboutCard';
 export * from './components/CatalogKindHeader';
-export * from './components/CatalogResultListItem';
+export * from './components/CatalogSearchResultListItem';
 export * from './components/CatalogTable';
-export * from './components/CatalogTable/columns';
 export * from './components/EntityLayout';
 export * from './components/EntityOrphanWarning';
 export * from './components/EntityProcessingErrorsPanel';
@@ -35,7 +34,6 @@ export {
   CatalogEntityPage,
   CatalogIndexPage,
   catalogPlugin,
-  catalogPlugin as plugin,
   EntityAboutCard,
   EntityDependencyOfComponentsCard,
   EntityDependsOnComponentsCard,
